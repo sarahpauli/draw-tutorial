@@ -1,0 +1,293 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #f3d5d5;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem;
+    align-items: center;
+    background: #681010;
+    position: relative;
+}
+header::after{
+  position:absolute;
+  bottom: -50px;
+  left: 0px;
+  width: 100%;
+  content:" ";
+  background: 
+  radial-gradient(circle at 50% 0%, #681010 25%, #c7c7c728 26%, #f3d5d5 40%);
+  background-color: #f3d5d5;
+  background-size:50px 100px;
+  height:50px;
+  background-repeat: repeat-x;
+}
+header h1 a {
+    text-decoration: none;
+    color: #fff;
+}
+header h1 a:hover {
+    text-decoration: none;
+    color: #e42626;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    font-family: "Poppins", "Verdana", serif;
+}
+nav ul li {
+    margin: 0;
+    margin-left: 1rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+nav ul li a:hover {
+    text-decoration: none;
+    color: #e42626;
+}
+
+article {
+   z-index: -2;
+   margin: 3rem;
+}
+
+h1, h2, h3 {
+    font-family: "Bree Serif", "Georgia", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+p {
+    font-family: "Poppins", "Verdana", serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.5rem;
+    max-width: 30rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+#dogref {
+    width: 70%;
+}
+
+a {
+    color: #e42626;
+}
+a:hover {
+    color:#681010;
+}
+
+.guts {
+    padding: 0 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.p1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drawing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    z-index: -2;
+    margin: auto;
+    border-radius: 1rem;
+    height: 30rem;
+    width: 50rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Progress Bar */
+
+:root {
+    --line-border-fill: #e42626;
+    --line-border-empty: #bdbdbd;
+}
+
+.numbs {
+    font-size: 1.8rem;
+    color: #e42626;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 400px;
+}
+
+.progress-container::before {
+    content: "";
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    transition: 0.4s ease;
+}
+
+.progress {
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    transition: 0.4s ease;
+}
+
+.circle {
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 3px solid #b2bec3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: 0.4s ease;
+}
+
+.circle.active {
+    border-color: var(--line-border-fill);
+}
+
+.btn {
+    background-color: var(--line-border-fill);
+    color: #fff;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+    font-family: "Poppins", "Verdana", serif;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px; 
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn:disabled {
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+}
+
+#all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+#s1 {
+    display: flex;
+}
+#s2 {
+    display: none;
+}
+#s3 {
+    display: none;
+}
+#s4 {
+    display: none;
+}
+#s5 {
+    display: none;
+}
+#s6 {
+    display: none;
+}
+#s7 {
+    display: none;
+}
+
+.info {
+    padding: 1rem 2rem;
+    margin: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+    article {
+      margin: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .drawing-container {
+        width: 25rem;
+        height: 45rem;
+        justify-content: flex-start;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    .progress-container {
+        width: 300px;
+    }
+
+    .circle {
+        height: 35px;
+        width: 35px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .drawing-container {
+        width: 20rem;
+        height: 48rem;
+    }
+
+    #dogref {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: .9rem;
+    }
+
+    nav ul {
+        font-size: .8rem;
+    }
+
+  }

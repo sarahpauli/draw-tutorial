@@ -1,0 +1,102 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    
+}
+* {
+    box-sizing: inherit;
+}
+
+.css-selector {
+    background: linear-gradient(270deg, #ea452a, #2a50ea, #45ea2a);
+    background-size: 600% 600%;
+
+    animation: Pets 20s ease infinite;
+}
+
+@keyframes Pets {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+body {
+    height: 100%;
+    margin: 1rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+article {
+    margin: 3rem;
+}
+
+h1, h3 {
+    color: #fff;
+    font-family: "Bree Serif", "Georgia", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+#tuts a {
+    color: #fff;
+    font-family: "Bree Serif", "Georgia", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+
+    margin: 3rem;
+}
+
+#tuts a:hover {
+    color:#b8f5d4;
+}
+
+p, a {
+    color: #fff;
+    font-family: "Poppins", "Verdana", sans-serif;
+    font-size: .75rem; 
+    text-align: center;
+}
+
+a:hover {
+    color:#b8f5d4;
+}
+
+#tuts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+    #tuts a {
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+
+    h1, h3, a, p {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #tuts a {
+        font-size: 1rem;
+        margin: 0.5rem;
+        text-decoration: underline;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+  
+  
